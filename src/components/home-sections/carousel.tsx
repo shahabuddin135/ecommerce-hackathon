@@ -3,10 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-
 import cImage1 from "../../../public/images/carousel1.jpg"
 import cImage2 from "../../../public/images/carousel2.jpg"
 import cImage3 from "../../../public/images/carousel3.jpg"
@@ -15,6 +11,7 @@ import Button from '../Button';
 
 
 import { Poppins } from 'next/font/google';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -92,13 +89,13 @@ const Carousel = () => {
           onClick={handlePrev}
           className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-white p-2 rounded-full hover:bg-yellow-600 z-20 shadow-lg"
         >
-          <MdOutlineKeyboardArrowLeft className="w-6 h-6 text-yellow-600 rounded-[100%] hover:text-white bg-transparent" />
+          <ChevronLeft  className="w-6 h-6 text-yellow-600 rounded-[100%] hover:text-white bg-transparent" />
         </button>
         <button
           onClick={handleNext}
           className="absolute top-1/2 right-4 transform -translate-y-1/2  text-white p-2 rounded-full z-20 shadow-lg bg-white hover:bg-[#B88E2F] active:bg-white active:text-[#B88E2F] transition-all"
         >
-          < MdOutlineKeyboardArrowRight className="w-6 h-6 text-yellow-600  rounded-[100%] bg-transparent hover:text-white" />
+          <ChevronRight  className="w-6 h-6 text-yellow-600  rounded-[100%] bg-transparent hover:text-white" />
         </button>
 
         {/* Dots */}

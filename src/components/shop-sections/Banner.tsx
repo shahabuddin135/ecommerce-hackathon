@@ -1,9 +1,12 @@
 import React from 'react'
 import shopBanner from '../../../public/images/shopBanner.png'
 import Image from 'next/image'
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+
+
 
 import { Poppins } from 'next/font/google';
+import { ChevronRight } from 'lucide-react';
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -25,7 +28,7 @@ const Banner = () => {
                     </h1>
                     <div className='flex gap-5 items-center font-semibold justify-center'>
                         <p>Home</p>
-                        <MdOutlineKeyboardArrowRight className='text-black size-6 font-semibold opacity-75' />
+                        <ChevronRight  className='text-black size-6 font-semibold opacity-75' />
                         <p className='text-gray-700'>Shop</p>
                     </div>
                 </div>
